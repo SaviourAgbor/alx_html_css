@@ -1,0 +1,68 @@
+/* Remove default margin and padding from all elements */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Source Sans 3", sans-serif;
+}
+
+/* Make the header appear as an overlay */
+header nav {
+  position: absolute; /* Overlay position */
+  top: 0;
+  left: 0;
+  width: 75%; /* Full width */
+  z-index: 10; /* Ensure it's on top of the hero section */
+  display: flex;
+  align-items: center;
+  padding: 5px; /* Some padding inside the header */
+  margin: 1% 12.5% 0;
+  background: rgba(0, 0, 0, 0);
+
+  /* Semi-transparent background for better readability */
+  justify-content: center;
+}
+
+header img {
+  height: 100%; /* Adjust logo size */
+}
+
+header ul {
+  list-style: none;
+  display: flex;
+  margin-left: auto;
+}
+
+header ul li {
+  margin-right: 20px;
+}
+
+header ul li a {
+  text-decoration: none;
+  color: white;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+/* Style the hero section to cover the entire screen */
+.hero {
+  background-image: url("../images/Object.png"); /* Set the background image */
+  background-size: cover; /* Make the image cover the entire section */
+  background-position: center; /* Center the background */
+  height: 969px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative; /* Relative to position the header correctly */
+  color: white;
+  background-repeat: no-repeat;
+}
+
+/* Additional styling for the hero content */
+.hero h1 {
+  font-size: 100px;
+  text-shadow: 4px 6px 4px rgba(0, 0, 0, 0.7); /* Shadow for better readability */
+}
