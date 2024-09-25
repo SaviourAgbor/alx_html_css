@@ -1,4 +1,4 @@
-/* Remove default margin and padding from all elements */
+/* Remove default margin and padding from all elements*/
 * {
   margin: 0;
   padding: 0;
@@ -10,24 +10,20 @@ body {
 }
 
 /* Make the header appear as an overlay */
+
 header nav {
   position: absolute; /* Overlay position */
   top: 0;
-  left: 0;
   width: 75%; /* Full width */
   z-index: 10; /* Ensure it's on top of the hero section */
   display: flex;
   align-items: center;
-  padding: 5px; /* Some padding inside the header */
-  margin: 1% 12.5% 0;
+  margin: 10px 12.5% 0;
   background: rgba(0, 0, 0, 0);
-
-  /* Semi-transparent background for better readability */
-  justify-content: center;
 }
 
 header img {
-  height: 100%; /* Adjust logo size */
+  height: 100%; /* Adjust logo size*/
 }
 
 header ul {
@@ -37,7 +33,7 @@ header ul {
 }
 
 header ul li {
-  margin-right: 20px;
+  margin-left: 20px;
 }
 
 header ul li a {
@@ -52,17 +48,226 @@ header ul li a {
   background-image: url("../images/Object.png"); /* Set the background image */
   background-size: cover; /* Make the image cover the entire section */
   background-position: center; /* Center the background */
-  height: 969px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  height: 100vh;
   position: relative; /* Relative to position the header correctly */
   color: white;
   background-repeat: no-repeat;
+  background: linear-gradient rgba(20 2 2);
+  text-align: center;
 }
 
 /* Additional styling for the hero content */
-.hero h1 {
-  font-size: 100px;
-  text-shadow: 4px 6px 4px rgba(0, 0, 0, 0.7); /* Shadow for better readability */
+
+.hero-school h1 {
+  font-size: 4rem;
+  letter-spacing: 3px;
+}
+
+.hero > .hero-school {
+  width: 420px;
+  height: 200px;
+  padding-top: 80px;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.hero-school span {
+  font-size: 1.2rem;
+  font-weight: 400;
+  margin-right: 20px;
+}
+
+.hero-school button {
+  background-color: #C271FF;
+  border: none;
+  padding: 15px 20px;
+  color: white;
+  border-radius: 30px;
+  font-size: 0.5em;
+  font-weight: 600;
+  margin-top: 20px;
+  cursor: pointer;
+  display: block;
+  margin: 10px auto;
+  box-shadow:1px 1px 12px rgba(20, 10,5, 0.9);
+  transition: box-shadow 0.3s ease;
+}
+
+/* Pros Section */
+.hero-pros {
+  margin: 100px 10%;
+}
+
+.hero-pros h2 {
+  margin-bottom: 30px;
+  font-weight: 600;
+  font-size: 1.2em;
+  letter-spacing: 0.5px;
+}
+
+.pros-wrapper {
+  display: flex;
+  justify-content: center;
+  gap: 100px;
+}
+
+.pro-img {
+  height: 120px;
+  width: 120px;
+  border-radius: 100px;
+  object-fit: cover;
+}
+
+.pro h3 {
+  margin-top: 10px;
+  font-size: 1rem;
+}
+
+.pro p {
+  color: #ddd;
+  margin-top: 3px;
+  font-size: 12px;
+}
+
+.testimonial {
+  display: flex;
+  justify-content: center;
+  padding: 50px;
+  gap: 40px;
+  background-color: #c271fe;
+  color: #f4f4f4;
+}
+
+.testimonial img {
+  height: 120px;
+}
+
+.most-popular {
+  padding: 50px 100px;
+}
+
+.most-popular h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 50px;
+}
+
+.smiles {
+  display: flex;
+  gap: 25px;
+}
+
+.review {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-top: 15px;
+  color: #c271fe;
+}
+
+.review img {
+  height: 30px;
+  padding-left: 0px;
+}
+
+.rating {
+  display: flex;
+  width: 230px;
+}
+
+.raview,
+.rating {
+  margin-top: 10px;
+  display: flex;
+  color: #c271ff;
+}
+
+.rating img {
+  height: 100%;
+}
+.rating p {
+  margin-left: autO;
+}
+
+.free-membership {
+  background-color: #071629;
+  color: #ffffff;
+  padding: 50px 100px;
+}
+
+.free-membership div {
+  display: inline-block;
+  width: 20%;
+  flex-wrap: wrap;
+
+  margin: 0 2%;
+  text-align: center;
+  vertical-align: top;
+}
+
+.free-membership h2 {
+  text-align: center;
+  padding: 20px;
+  margin-bottom: 40px;
+  font-size: 2em;
+  font-weight: 400;
+}
+
+.free-membership img {
+  display: block;
+  margin: 0 auto 20px;
+  width: 60px;
+}
+
+.free-membership h3 {
+  padding: 15px 0;
+}
+
+.free-membership button {
+  display: block;
+  background-color: #c271ff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 50px;
+  color: #ffffff;
+  margin: 50px auto;
+}
+
+.faq h2 {
+  text-align:center;
+  margin-top: 50px;
+  color: rgba(0, 0, 0, 0.6)
+}
+
+.faq h3 {
+  color: rgba(0, 0, 0, 0.8);
+  margin-bottom: 10px;
+}
+
+.faq p {
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.faq-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  width: 70%;
+  margin: 50px auto;
+  column-gap: 50px;
+  row-gap: 50px;
+}
+
+/* Styling the footer */
+
+footer {
+  background-color: #071629;
+  padding: 40px 100px;
+}
+
+footer p {
+  text-align: center;
+  color: rgba(236, 236, 235, 0.6);
+  font-size: 12px;
+  padding: 20px;
 }
