@@ -157,6 +157,27 @@ header ul li a {
   gap: 25px;
 }
 
+.most-popular .smiles-play-img {
+  position: relative;
+  width: 255px;
+  height: 154px;
+  margin-bottom: 20px;
+}
+
+.most-popular .smile-img {
+  height: 100%;
+  width: 100%px;
+  position: absolute;
+}
+
+.play {
+  position: absolute;
+  z-index: 10;
+  top: 28%;
+  left: 30%;
+  align-self: center;
+}
+
 .review {
   display: flex;
   align-items: center;
@@ -281,6 +302,14 @@ footer {
 #icons a:active {
   color: #9969be60;
   transform: scale(1.1);
+}
+footer a i {
+  font-size: 1.5rem;
+  padding: 8px;
+  color: #071629;
+  background-color: #ffffff;
+  margin-right: 10px;
+  border-radius: 50px;
 }
 
 footer p {
