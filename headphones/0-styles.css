@@ -23,20 +23,21 @@
 }
 
 @font-face {
-  font-family: 'holberton_school-icon';
-  src:  url('font-icons/holberton_school-icon.eot');
-  src:  url('font-icons/holberton_school-icon.eot') format('embedded-opentype'),
-    url('font-icons/holberton_school-icon.ttf') format('truetype'),
-    url('font-icons/holberton_school-icon.woff') format('woff'),
-    url('font-icons/holberton_school-icon.svg') format('svg');
+  font-family: "holberton_school-icon";
+  src: url("font-icons/holberton_school-icon.eot");
+  src: url("font-icons/holberton_school-icon.eot") format("embedded-opentype"),
+    url("font-icons/holberton_school-icon.ttf") format("truetype"),
+    url("font-icons/holberton_school-icon.woff") format("woff"),
+    url("font-icons/holberton_school-icon.svg") format("svg");
   font-weight: normal;
   font-style: normal;
   font-display: block;
 }
 
-[class^="holberton_school-icon-"], [class*=" holberton_school-icon-"] {
+[class^="holberton_school-icon-"],
+[class*=" holberton_school-icon-"] {
   /* use !important to prevent issues with browser extensions that change fonts */
-  font-family: 'holberton_school-icon' !important;
+  font-family: "holberton_school-icon" !important;
   speak: none;
   font-style: normal;
   font-weight: normal;
@@ -48,7 +49,6 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
 
 .holberton_school-icon-ic_sound:before {
   content: "\e90e";
@@ -66,8 +66,6 @@
   content: "\e909";
 }
 
-
-
 :root {
   --text-color: #ffffff;
   --acent-color: #ff6565;
@@ -82,9 +80,7 @@ body {
   padding: 0;
   box-sizing: border-box;
   font-family: "source_sans_proregular";
-
 }
-
 
 a:hover,
 a:active {
@@ -144,9 +140,13 @@ header ul a {
   display: none;
 }
 
-
 .hero {
-  background-image: linear-gradient(rgba(48, 222, 235, 0.04),rgba(48, 222, 235, 0.1), rgba(0, 0, 0, 0.9)), url(images/headphones_hero_1.jpg);
+  background-image: linear-gradient(
+      rgba(48, 222, 235, 0.04),
+      rgba(48, 222, 235, 0.1),
+      rgba(0, 0, 0, 0.9)
+    ),
+    url(images/headphones_hero_1.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   min-height: 800px;
@@ -155,7 +155,6 @@ header ul a {
   display: relative;
   text-align: center;
   width: 100%;
-
 }
 
 .hero .hero-content {
@@ -184,7 +183,7 @@ header ul a {
 
 /* Styling hero button  */
 
-.hero button {
+button {
   margin: 40px auto 50px;
   padding: 10px 20px;
   font-size: 14px;
@@ -204,7 +203,7 @@ header ul a {
 
 /* Styles for "What we do page" */
 .our-work {
-  width: 100%
+  width: 100%;
 }
 
 .our-work-wrapper {
@@ -215,37 +214,155 @@ header ul a {
 .our-work-content {
   width: 45vw;
   padding: 7% 0 0;
-  margin: 0 auto;
+  margin: 0 auto 50px;
   text-align: center;
 }
 
 .our-work_blog {
   display: flex;
-  gap: 20px;
+  gap: 4%;
+  margin: 0 auto 50px;
 }
 
 .our-work h2 {
   font-family: "source_sans_probold";
-
 }
 .icon {
   font-size: 65px;
   color: var(--acent-color);
 }
+
+/* Style our results speak for themselves section */
+
 .our-work_blog .blog-icons {
-  height: 200px;
-  width: 15vw;
+  height: fit-content;
+  width: fit-content;
+  margin: auto;
   align-content: center;
   text-align: center;
-  margin: 2%;
-}
-.our-work_blog .blog-icons {
-  height: 250px;
-  width: 20%;
 }
 
+#our-results {
+  background-image: url(images/headphones_hero_2.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  max-height: 800px;
+  min-height: 100vh;
+  width: 100%;
+  color: var(--text-color);
+}
 
-/* Media query of 768px max-width  */
+#our-results .blog-icons {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+#our-results .blog-icons h1 {
+  position: absolute;
+  top: 30%;
+  z-index: 10;
+  margin: auto;
+  font-size: 2rem;
+}
+
+#our-results .blog-icons h1:after {
+  content: "Lorem ipsom dolor";
+  font-size: 8px;
+  display: block;
+  font-family: "sourcesanspro-regular sans-serif";
+  opacity: 0.6;
+}
+
+.pentagone-img {
+  position: relative;
+  width: 100%;
+  height: auto;
+}
+
+/* Styling the contact section  */
+.contact {
+  width: 100%;
+}
+
+.contact-wrapper {
+  width: 50%;
+  margin: auto;
+  padding: 15%;
+}
+
+.contact h3 {
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+.form-block {
+  width: 100%;
+  margin-top: 50px;
+  display: block;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+form label {
+  margin-right: 15px;
+  font-family: "source_sans_probold";
+  font-size: 1rem;
+  width: 30%;
+}
+
+form input {
+  border: none;
+  width: 70%;
+  height: 30px;
+  font-family: "sourcesanspro-regular sans-serif";
+  font-size: 1.2rem;
+}
+
+form input:hover,
+form label:hover {
+  cursor: pointer;
+}
+
+/* Styling the footer */
+
+footer {
+  background-color: #071629;
+  padding: 40px 100px;
+}
+
+footer img {
+  width: 70%;
+}
+
+.footer-ctn {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 50px;
+}
+
+footer a i {
+  padding: 8px;
+  color: #071629;
+  background-color: #ffffff;
+  margin-right: 20px;
+  border-radius: 50px;
+}
+
+footer p {
+  text-align: center;
+  color: rgba(236, 236, 235, 0.6);
+  font-size: 12px;
+}
+
+.icons {
+  height: 30%;
+  margin-top: 2%;
+}
+
+/* Media
+ query of 768px max-width  */
 
 @media (max-width: 768px) {
   nav img {
@@ -261,6 +378,19 @@ header ul a {
 
   .hero .hero-content {
     width: 80%;
+  }
+
+  footer img {
+    margin-bottom: 50px;
+  }
+  .footer-ctn {
+    display: block;
+    margin-bottom: 50px;
+  }
+
+  footer {
+    display: block;
+    text-align: center;
   }
 }
 
@@ -293,5 +423,47 @@ header ul a {
     position: absolute;
     right: 5%;
     top: 0px;
+  }
+
+  /* media query styles for what we do page */
+  .our-work-wrapper {
+    margin-top: 10%;
+    max-width: 80%;
+  }
+  .our-work_blog {
+    display: block;
+    margin: 0px auto;
+    text-align: center;
+    padding: 0px;
+  }
+
+  .our-work_blog .blog-icons {
+    width: 20%;
+    margin: 5% auto 0;
+    text-align: center;
+  }
+
+  .our-work-content {
+    min-width: 70vw;
+  }
+
+  .our-work h2 {
+    margin-top: 0%;
+  }
+
+  #our-results .our-work-content h2 {
+    margin: 5% 0 5%;
+  }
+
+  #our-results .blog-icons h1 {
+    position: absolute;
+    top: 30%;
+    z-index: 10;
+    margin: auto;
+    font-size: 26px;
+  }
+
+  #our-results .blog-icons h1:after {
+    font-size: 6px;
   }
 }
