@@ -1,0 +1,537 @@
+@font-face {
+  font-family: "source_sans_proregular";
+  src: url("font/sourcesanspro-regular-webfont.woff2") format("woff2"),
+    url("font/sourcesanspro-regular-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "source_sans_prosemibold";
+  src: url("font/sourcesanspro-semibold-webfont.woff2") format("woff2"),
+    url("font/sourcesanspro-semibold-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "source_sans_probold";
+  src: url("font/sourcesanspro-bold-webfont.woff2") format("woff2"),
+    url("font/sourcesanspro-bold-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "holberton_school-icon";
+  src: url("font-icons/holberton_school-icon.eot");
+  src: url("font-icons/holberton_school-icon.eot") format("embedded-opentype"),
+    url("font-icons/holberton_school-icon.ttf") format("truetype"),
+    url("font-icons/holberton_school-icon.woff") format("woff"),
+    url("font-icons/holberton_school-icon.svg") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="holberton_school-icon-"],
+[class*=" holberton_school-icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: "holberton_school-icon" !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.holberton_school-icon-ic_sound:before {
+  content: "\e90e";
+}
+
+.holberton_school-icon-ic_video:before {
+  content: "\e910";
+}
+
+.holberton_school-icon-ic_music:before {
+  content: "\e90d";
+}
+
+.holberton_school-icon-ic_hearing:before {
+  content: "\e909";
+}
+
+:root {
+  --text-color: #ffffff;
+  --acent-color: #ff6565;
+  --base-color: #000000;
+}
+
+/* Base styles  */
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "source_sans_proregular";
+}
+
+a:hover,
+a:active {
+  color: var(--acent-color);
+  opacity: 0.9;
+  transition: 0.5s;
+}
+
+/* Styling nav bar  */
+
+header nav {
+  position: absolute;
+  display: flex;
+  top: 27px;
+  height: 32px;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+nav img {
+  height: 32px;
+  width: 161px;
+  margin-left: 15%;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin-right: 15%;
+  gap: 20px;
+}
+
+nav ul li {
+  margin: 0;
+}
+
+header ul a {
+  text-decoration: none;
+  font-family: "source_sans_probold";
+  color: var(--text-color);
+  font-size: 12px;
+}
+
+#nav-toggle {
+  display: none;
+}
+
+/* Menu Icon (Hamburger) */
+
+.nav-toggle-icon {
+  font-size: 26px;
+  color: var(--text-color);
+  cursor: pointer;
+  padding: 15px;
+  display: none;
+}
+
+.hero {
+  background-image: linear-gradient(
+      rgba(48, 222, 235, 0.04),
+      rgba(48, 222, 235, 0.1),
+      rgba(0, 0, 0, 0.9)
+    ),
+    url(images/headphones_hero_1.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+  display: relative;
+  text-align: center;
+  width: 100%;
+  padding-bottom: 50px;
+}
+
+.hero .hero-content {
+  padding-top: 270px;
+  width: 43.6%;
+  text-align: center;
+  margin: auto;
+}
+
+.hero .content-1 h1,
+.hero .content-1 p {
+  font-family: "source_sans_prosemibold";
+  color: var(--text-color);
+}
+
+.hero .hero-content h1 {
+  font-size: 1.5rem;
+  padding: 0;
+  margin: 0;
+}
+
+.hero .content-1 p {
+  font-size: 0.75rem;
+  margin: 0;
+}
+
+/* Styling hero button  */
+
+button {
+  margin: 40px auto 50px;
+  padding: 10px 20px;
+  font-size: 14px;
+  font-family: "source_sans_probold";
+  color: var(--text-color);
+  background-color: var(--acent-color);
+  border: none;
+  border-radius: 50px;
+}
+
+.hero .content-2 p {
+  font-family: "source_sans_proregular";
+  font-size: 0.75rem;
+  color: var(--text-color);
+  line-height: 1.6em;
+}
+
+/* Styles for "What we do page" */
+.our-work {
+  width: 100%;
+  min-height: 100vh;
+
+}
+
+.our-work-wrapper {
+  max-width: 75%;
+  margin: 0 auto;
+}
+
+.our-work-content {
+  width: 45vw;
+  padding: 7% 0 0;
+  margin: 0 auto 50px;
+  text-align: center;
+}
+
+.our-work_blog {
+  display: flex;
+  gap: 4%;
+  margin: 0 auto;
+}
+
+.our-work h2 {
+  font-family: "source_sans_probold";
+}
+.icon {
+  font-size: 65px;
+  color: var(--acent-color);
+}
+
+/* Style our results speak for themselves section */
+
+.our-work_blog .blog-icons {
+  height: fit-content;
+  width: fit-content;
+  margin: auto;
+  align-content: center;
+  text-align: center;
+}
+
+#our-results {
+  background-image: url(images/headphones_hero_2.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  width: 100%;
+  color: var(--text-color);
+}
+
+#our-results .blog-icons {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+#our-results .blog-icons h1 {
+  position: absolute;
+  top: 30%;
+  z-index: 10;
+  margin: auto;
+  font-size: 2rem;
+}
+
+#our-results .blog-icons h1:after {
+  content: "Lorem ipsom dolor";
+  font-size: 8px;
+  display: block;
+  font-family: "sourcesanspro-regular sans-serif";
+  opacity: 0.6;
+}
+
+.pentagone-img {
+  position: relative;
+  width: 100%;
+  height: auto;
+}
+
+
+/* Styling the contact section  */
+.contact {
+  width: 100%;
+}
+
+.contact-wrapper {
+  width: 50%;
+  margin: auto;
+  padding: 10%;
+}
+
+.contact h3 {
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+form {
+  width: 100%;
+}
+
+.form-block {
+  width: 100%;
+  margin-top: 50px;
+  display: block;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+form label {
+  margin-right: 15px;
+  font-family: "source_sans_probold";
+  font-size: 1rem;
+  width: 30%;
+}
+
+form input {
+  border: none;
+  width: 70%;
+  height: 30px;
+  font-family: "sourcesanspro-regular sans-serif";
+  font-size: 1.2rem;
+}
+
+form input:hover,
+form label:hover {
+  cursor: pointer;
+}
+
+/* Styling the footer */
+
+footer {
+  background-color: #071629;
+  padding: 40px 100px;
+}
+
+footer img {
+  width: 70%;
+}
+
+.footer-ctn {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 50px;
+}
+
+footer a i {
+  padding: 8px;
+  color: #071629;
+  background-color: #ffffff;
+  margin-right: 20px;
+  border-radius: 50px;
+}
+
+footer p {
+  text-align: center;
+  color: rgba(236, 236, 235, 0.6);
+  font-size: 12px;
+}
+
+.icons {
+  height: 30%;
+  margin-top: 2%;
+}
+
+
+/* Media
+ query of 768px max-width  */
+
+@media (max-width: 768px) {
+  nav img {
+    margin-left: 5%;
+  }
+  nav ul {
+    margin-right: 5%;
+    gap: 15px;
+  }
+
+  .hero .hero-content {
+    width: 70%;
+    text-align: center;
+    padding-top: 300px;
+  }
+
+
+  /* our work media styles  */
+
+  .our-work {
+    min-height: 100vh;
+    padding-bottom: 100px;
+  }
+  
+  .our-work_blog {
+    display: grid;
+    grid-template-columns: 2fr 2fr;
+    gap: 12%;
+    width: 75%;
+  }
+
+  .our-work-content {
+    min-width: 100%;
+  }
+
+  /* our-result pentagons */
+  #our_results {
+    height: 800px;
+  }
+
+
+.pentagone-img {
+  position: relative;
+  width: 110px;
+  height: auto;
+}
+
+
+  footer img {
+    margin-bottom: 50px;
+  }
+  .footer-ctn {
+    display: block;
+    margin-bottom: 50px;
+  }
+
+  footer {
+    display: block;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .nav-ul {
+    flex-direction: column;
+    display: none;
+    width: 300px;
+    position: absolute;
+    right: 8%;
+    text-align: center;
+    gap: 40px;
+    top: 40px;
+  }
+
+  header ul a {
+    font-size: 1.2rem;
+    padding: 10px 25%;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Dark shadow */
+    transition: box-shadow 0.3s ease;
+  }
+
+  #nav-toggle:checked + .nav-toggle-icon + .nav-ul {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .nav-toggle-icon {
+    display: block;
+    position: absolute;
+    right: 5%;
+    top: 0px;
+  }
+
+/* hero style  */
+
+  .hero {
+    max-height: 1500px;
+    min-height: 100%;
+    padding-bottom: 50px;
+
+  }
+
+  /* what we do page styles */
+  .our-work-wrapper {
+    margin-top: 10%;
+    max-width: 80%;
+  }
+  .our-work_blog {
+    display: block;
+    margin: 0px auto;
+    text-align: center;
+    padding: 0px;
+  }
+
+
+  .our-work_blog .blog-icons {
+    width: 70%;
+    margin: 5% auto 0;
+    text-align: center;
+  }
+
+  .our-work-content {
+    min-width: 70vw;
+  }
+
+  .our-work h2 {
+    margin-top: 20%;
+  }
+
+  /* our results  */
+
+  #our-results {
+    max-height: 1500px;
+    min-height: 100%;
+    padding-bottom: 50px;
+  }
+
+  #our-results .our-work-content h2 {
+    margin: 5% 0 5%;
+  }
+
+  #our-results .blog-icons h1 {
+    position: absolute;
+    top: 30%;
+    z-index: 10;
+    margin: auto;
+    font-size: 26px;
+  }
+
+  .pentagone-img {
+    position: relative;
+    width: 80px;
+    height: auto;
+  }
+
+  #our-results .blog-icons h1:after {
+    font-size: 6px;
+  }
+
+  #our-results p {
+    margin-bottom: 0;
+    font-size: 14px;
+  }
+
+}

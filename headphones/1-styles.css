@@ -201,4 +201,142 @@ button {
   line-height: 1.6em;
 }
 
+/* Styles for "What we do page" */
+.our-work {
+  width: 100%;
+}
 
+.our-work-wrapper {
+  max-width: 75%;
+  margin: 0 auto;
+}
+
+.our-work-content {
+  width: 45vw;
+  padding: 7% 0 0;
+  margin: 0 auto 50px;
+  text-align: center;
+}
+
+.our-work_blog {
+  display: flex;
+  gap: 4%;
+  margin: 0 auto 50px;
+}
+
+.our-work h2 {
+  font-family: "source_sans_probold";
+}
+.icon {
+  font-size: 65px;
+  color: var(--acent-color);
+}
+
+
+
+/* Media
+ query of 768px max-width  */
+
+ @media (max-width: 768px) {
+  nav img {
+    margin-left: 10%;
+  }
+  nav ul {
+    margin-right: 10%;
+  }
+
+  .hero img {
+    background-position: ;
+  }
+
+  .hero .hero-content {
+    width: 80%;
+  }
+
+  footer img {
+    margin-bottom: 50px;
+  }
+  .footer-ctn {
+    display: block;
+    margin-bottom: 50px;
+  }
+
+  footer {
+    display: block;
+    text-align: center;
+  }
+}
+
+@media (max-width: 600px) {
+  .nav-ul {
+    flex-direction: column;
+    display: none;
+    width: 300px;
+    position: absolute;
+    right: 15%;
+    text-align: center;
+    gap: 40px;
+    top: 40px;
+  }
+
+  header ul a {
+    font-size: 1.2rem;
+    padding: 10px 25%;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Dark shadow */
+    transition: box-shadow 0.3s ease;
+  }
+
+  #nav-toggle:checked + .nav-toggle-icon + .nav-ul {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .nav-toggle-icon {
+    display: block;
+    position: absolute;
+    right: 5%;
+    top: 0px;
+  }
+
+  /* media query styles for what we do page */
+  .our-work-wrapper {
+    margin-top: 10%;
+    max-width: 80%;
+  }
+  .our-work_blog {
+    display: block;
+    margin: 0px auto;
+    text-align: center;
+    padding: 0px;
+  }
+
+  .our-work_blog .blog-icons {
+    width: 20%;
+    margin: 5% auto 0;
+    text-align: center;
+  }
+
+  .our-work-content {
+    min-width: 70vw;
+  }
+
+  .our-work h2 {
+    margin-top: 0%;
+  }
+
+  #our-results .our-work-content h2 {
+    margin: 5% 0 5%;
+  }
+
+  #our-results .blog-icons h1 {
+    position: absolute;
+    top: 30%;
+    z-index: 10;
+    margin: auto;
+    font-size: 26px;
+  }
+
+  #our-results .blog-icons h1:after {
+    font-size: 6px;
+  }
+}
